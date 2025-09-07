@@ -1,9 +1,12 @@
 package com.example.demo.mapper;
 
+import org.springframework.stereotype.Service;
+
 import com.example.demo.dto.ProductRequest;
 import com.example.demo.dto.ProductResponse;
 import com.example.demo.model.Product;
 
+@Service
 public class ProductMapper {
 	
 	
@@ -18,7 +21,7 @@ public class ProductMapper {
 
 	}
 	
-	public static ProductResponse toDto(Product response)
+	public static ProductResponse toResponse(Product response)
 	{
 		return ProductResponse.builder()
 				.id(response.getId())
